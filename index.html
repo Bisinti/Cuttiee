@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Cuttiee! 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Page 1: Initial Question -->
+        <div class="page active" id="page1">
+            <div class="question">Hi Crush! 💕<br>You're so cute,<br>Are you single?</div>
+            
+            <div class="character">
+                <img src="yyy.gif" alt="Nervous cat" class="cat-gif">
+            </div>
+
+            <div class="button-container">
+                <button class="btn btn-no" onclick="showSorry()">No</button>
+                <button class="btn btn-yes" onclick="goToPage2()">Yes</button>
+            </div>
+        </div>
+
+        <!-- Page 2: Second Question -->
+        <div class="page" id="page2">
+            <div class="question">Do I have a chance? 🥺</div>
+            
+            <div class="character">
+                <img src="ttt.jpg" alt="Cute cat" class="cat-gif">
+            </div>
+
+            <div class="button-container">
+                <button class="btn btn-no" onclick="showSad()">No</button>
+                <button class="btn btn-yes" onclick="showHappy()">Yes</button>
+            </div>
+        </div>
+
+        <!-- Happy Celebration -->
+        <div class="page" id="happy">
+            <div class="celebration-text">Yaaaay! 🎉💕</div>
+            <div class="question">I'm so happy! 😊</div>
+            
+            <div class="character">
+                <img src="catr.gif" alt="Happy cat" class="cat-gif">
+                <img src="cath.gif" alt="Excited cat" class="cat-gif cat-gif-second">
+            </div>
+        </div>
+
+        <!-- Sad Response -->
+        <div class="page" id="sad">
+            <div class="sad-text">Aww... okay 😢</div>
+            <div class="question">Maybe next time...</div>
+            
+            <div class="character">
+                <img src="hhh.gif" alt="Sad cat" class="cat-gif">
+            </div>
+        </div>
+
+        <!-- Sorry Page (if not single) -->
+        <div class="page" id="sorry">
+            <div class="sad-text">Oh... I understand 💔</div>
+            <div class="question">Thanks for being honest!</div>
+            
+            <div class="character">
+                <img src="hhh.gif" alt="Crying cat" class="cat-gif">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

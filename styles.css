@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.page {
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.celebration-text, .sad-text {
+    font-size: 36px;
+    color: #ff6b9d;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Cat GIF Styling */
+.character {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.cat-gif {
+    max-width: 250px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-yes {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.btn-yes:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.4);
+}
+
+.btn-no {
+    background: #e0e0e0;
+    color: #666;
+}
+
+.btn-no:hover {
+    background: #d0d0d0;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .question {
+        font-size: 22px;
+    }
+    
+    .celebration-text, .sad-text {
+        font-size: 28px;
+    }
+    
+    .cat-gif {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    .btn {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Hearts animation for happy page */
+#happy .character::before,
+#happy .character::after {
+    content: '💕';
+    position: absolute;
+    font-size: 30px;
+    animation: floatHeart 3s ease-in-out infinite;
+}
+
+#happy .character::before {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+#happy .character::after {
+    right: 20%;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatHeart {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-30px) rotate(15deg);
+        opacity: 0.7;
+    }
+}
