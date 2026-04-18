@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi Cuttiee! 💕</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <!-- Sparkle Container -->
+    <div class="sparkle-container" id="sparkleContainer"></div>
+    
     <div class="container">
         <!-- Page 1: Initial Question -->
         <div class="page active" id="page1">
             <div class="question">Hi Crush! 💕<br>You're so cute,<br>Are you single?</div>
             
             <div class="character">
-                <img src="yyy.gif" alt="Nervous cat" class="cat-gif">
+                <img src="yyy.gif" alt="Nervous cat" class="cat-gif" onclick="createSparkles(event)">
             </div>
 
             <div class="button-container">
@@ -27,7 +39,7 @@
             <div class="question">Can I know more about you? 🥺</div>
             
             <div class="character">
-                <img src="ttt.jpg" alt="Cute cat" class="cat-gif">
+                <img src="ttt.jpg" alt="Cute cat" class="cat-gif" onclick="createSparkles(event)">
             </div>
 
             <div class="button-container">
@@ -42,8 +54,8 @@
             <div class="question">SS this and send it to me! 😊</div>
             
             <div class="character">
-                <img src="catr.gif" alt="Happy cat" class="cat-gif">
-                <img src="cath.gif" alt="Excited cat" class="cat-gif cat-gif-second">
+                <img src="catr.gif" alt="Happy cat" class="cat-gif" onclick="createSparkles(event)">
+                <img src="cath.gif" alt="Excited cat" class="cat-gif cat-gif-second" onclick="createSparkles(event)">
             </div>
         </div>
 
@@ -53,7 +65,7 @@
             <div class="question">Maybe next time...</div>
             
             <div class="character">
-                <img src="hhh.gif" alt="Sad cat" class="cat-gif">
+                <img src="hhh.gif" alt="Sad cat" class="cat-gif" onclick="createSparkles(event)">
             </div>
         </div>
 
@@ -63,7 +75,7 @@
             <div class="question">Thanks for being honest!</div>
             
             <div class="character">
-                <img src="hhh.gif" alt="Crying cat" class="cat-gif">
+                <img src="hhh.gif" alt="Crying cat" class="cat-gif" onclick="createSparkles(event)">
             </div>
         </div>
     </div>
